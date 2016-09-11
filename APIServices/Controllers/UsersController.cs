@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using APIServices.Models;
+
 using System.Data;
 
 
@@ -75,7 +75,7 @@ namespace APIServices.Controllers
             }
         }
         [HttpPost]
-        public string CreateUser([FromBody] Users objUser)
+        public string CreateUser([FromBody] Models.Users objUser)
         {
             string result = string.Empty;
             if (objUser == null)
@@ -89,7 +89,7 @@ namespace APIServices.Controllers
             return result;
         }
         [HttpPost]
-        public bool UpdateUser([FromBody] Users objUser, int userID)
+        public bool UpdateUser([FromBody] Models.Users objUser, int userID)
         {
            return new DataLayer.Users().updateUser(objUser, userID);           
         }
