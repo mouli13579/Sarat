@@ -1,0 +1,195 @@
+﻿.container {
+    overflow:hidden;
+}
+.left-menu {       
+     margin-bottom: -5000px; /* any large number will do */
+     padding-bottom: 5000px; 
+    background-color: #dddddd;
+}
+
+.left-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    background-color: #dddddd;
+}
+
+.left-menu li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.left-menu li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.left-menu li a:hover:not(.active) {
+    background-color: #bfbaba;
+    color: white;
+}
+
+
+.home-content {
+ 
+   
+    height: 100%;
+}
+
+.card ul {
+    list-style:none;
+}
+.card-img-overlay {
+padding:0;
+}
+.card-inverse .card-blockquote, .card-inverse .card-footer, .card-inverse .card-header, .card-inverse .card-title {
+    color: #b51717;
+}
+.card-img {
+    
+    opacity: .3;
+}
+	.box-style {
+		height: auto;
+		width: 300px;
+		border: 1px solid #efabab;
+		box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+        background-color:#dce2e4;
+	}
+        .box-style .PIE {
+        height :400px;
+        }
+	 .box-style ul{
+        list-style:none;
+        padding:20px;
+	}
+	.header-panel {
+		background: rgba(0, 0, 0, 0.75);
+		padding: 5px;
+	}
+	.header-panel label {
+		color: #fff;
+
+	}
+    .box-style img {
+    position: absolute;
+    left: 0;
+    top: 36px;
+    width: 300px;
+    height: 213px;
+    opacity: 0.2;
+}
+.divMech {
+        position: relative;
+        z-index: 1;
+        height: auto;
+}
+.divMech .Mechbg {    
+    background: url(../Images/1.jpg) center center;
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;    
+    top: 0;
+    bottom: -11px;
+    left: 0;
+    right: 0;    
+}
+.divMech .Matbg {    
+    background: url(../Images/3.jpg) center center;
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;    
+    top: 0;
+    bottom: -11px;
+    left: 0;
+    right: 0;    
+}
+.divMech .Robbg {    
+    background: url(../Images/2.jpg) center center;
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;    
+    top: 0;
+    bottom: -11px;
+    left: 0;
+    right: 0;    
+}
+.divMech .PIEbg {    
+    background: url(../Images/4.jpg) center center;
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;    
+    top: 0;
+    bottom: -11px;
+    left: 0;
+    right: 0;    
+}
+.divMech .FCEbg {    
+    background: url(../Images/5.jpg) center center;
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;    
+    top: 0;
+    bottom: -11px;
+    left: 0;
+    right: 0;    
+}
+.divMech .EOPbg {    
+    background: url(../Images/6.png) center center;
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;    
+    top: 0;
+    bottom: -11px;
+    left: 0;
+    right: 0;    
+}
+.divMech .HMTSbg {    
+    background: url(../Images/7.png) center center;
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;    
+    top: 0;
+    bottom: -11px;
+    left: 0;
+    right: 0;    
+}
+    .divMech ul {
+     color:#2e076b;
+    }
+
+.divCall {
+    border: 2px solid #bfb9b9;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 7px;
+    background-color: white;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+}
+    .divCall .main-text {
+        font-weight:bold;
+
+    }
+    .divCall p {
+    font-size:12px;
+    }
+.list-style {
+list-style:none;
+    width: 33%;
+    padding: 0;
+}
+    .list-style li {
+         padding: 0.75rem 1.25rem;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    }
+        .list-style li a {
+        color:#000000;
+        }
+        .list-style li a:hover {
+         text-decoration:none;
+         color:#000000;
+        } 
