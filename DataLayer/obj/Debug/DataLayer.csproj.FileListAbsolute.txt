@@ -5,3 +5,10 @@ F:\Projects\sarat\Demo\DataLayer\bin\Debug\Models.pdb
 F:\Projects\sarat\Demo\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
 F:\Projects\sarat\Demo\DataLayer\obj\Debug\DataLayer.dll
 F:\Projects\sarat\Demo\DataLayer\obj\Debug\DataLayer.pdb
+F:\Projects\sarat\gitbranch\Sarat\DataLayer\bin\Debug\DataLayer.dll
+F:\Projects\sarat\gitbranch\Sarat\DataLayer\bin\Debug\DataLayer.pdb
+F:\Projects\sarat\gitbranch\Sarat\DataLayer\bin\Debug\Models.dll
+F:\Projects\sarat\gitbranch\Sarat\DataLayer\bin\Debug\Models.pdb
+F:\Projects\sarat\gitbranch\Sarat\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Projects\sarat\gitbranch\Sarat\DataLayer\obj\Debug\DataLayer.dll
+F:\Projects\sarat\gitbranch\Sarat\DataLayer\obj\Debug\DataLayer.pdb
