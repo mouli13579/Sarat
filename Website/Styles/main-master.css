@@ -95,6 +95,10 @@ padding:0;
 padding:0;
 }
 
-.fake-input { position: relative; width:175px; margin:2px;}
+/*.fake-input { position: relative; width:175px; margin:2px;}*/
 .fake-input input { border:none: background:#fff; display:block; width: 100%; box-sizing: border-box }
 .fake-input img { position: absolute; top: 4px; right: 5px }
+
+.errortextbox {
+border-color:red;
+}

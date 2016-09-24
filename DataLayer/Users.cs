@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace DataLayer
 {
@@ -80,9 +81,9 @@ namespace DataLayer
             int UserID = 0;
           
             string hashedPassword = util.Encrypt(user.Password);
-
-          
-            SqlConnection connection = OpenConnection();
+           // string strConn = "server=localhost;uid=sa; pwd=Passw0rd;database=Journals;";
+           // SqlConnection connection = new SqlConnection(strConn);
+            SqlConnection connection =  OpenConnection();
             try
             {
                 SqlCommand command = connection.CreateCommand();
@@ -90,24 +91,21 @@ namespace DataLayer
                 command.CommandText = "[dbo].[CreateUser]";
 
                 command.Parameters.Add(new SqlParameter("Password", hashedPassword));
-                command.Parameters.Add(new SqlParameter("FirstName", user.FirstName));
-                command.Parameters.Add(new SqlParameter("MiddleName", user.MiddleName));
+                command.Parameters.Add(new SqlParameter("FirstName", user.FirstName));               
                 command.Parameters.Add(new SqlParameter("LastName", user.LastName));
                 command.Parameters.Add(new SqlParameter("UserName", user.UserName));
                 command.Parameters.Add(new SqlParameter("PhoneNumber", user.PhoneNumber));
-                command.Parameters.Add(new SqlParameter("Email", user.Email));
-                command.Parameters.Add(new SqlParameter("Address", user.Address));
+                command.Parameters.Add(new SqlParameter("Email", user.Email));               
                 command.Parameters.Add(new SqlParameter("City", user.City));
                 command.Parameters.Add(new SqlParameter("PostalCode", user.PostalCode));
-                command.Parameters.Add(new SqlParameter("Country", user.Country));
-                command.Parameters.Add(new SqlParameter("ImageName", user.ImageName));
-                command.Parameters.Add(new SqlParameter("RoleID", user.RoleID));
+                command.Parameters.Add(new SqlParameter("Country", user.Country));                
+                command.Parameters.Add(new SqlParameter("RoleId", user.RoleID));
 
 
                 // Output parameter to return newly created UserID
-                SqlParameter userID = command.Parameters.Add(new SqlParameter("UserID", SqlDbType.Int));
+                SqlParameter userID = command.Parameters.Add(new SqlParameter("userID", SqlDbType.Int));
                 userID.Direction = ParameterDirection.Output;
-
+               // connection.Open();
                 command.ExecuteNonQuery();
 
                 UserID = Convert.IsDBNull(userID.Value) ? 0 : (int)userID.Value;

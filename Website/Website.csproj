@@ -122,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Forms\AboutUs.aspx" />
+    <Content Include="Forms\EditorialGuideLines.aspx" />
     <Content Include="Forms\EngineeringJournals.aspx" />
     <Content Include="Forms\Journals.aspx" />
     <Content Include="Forms\AuthorsHelp.aspx" />
@@ -135,16 +136,28 @@
     <Content Include="Images\1.jpg" />
     <Content Include="Images\2.jpg" />
     <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\5.jpg" />
+    <Content Include="Images\6.png" />
+    <Content Include="Images\7.png" />
+    <Content Include="Images\banner.png" />
+    <Content Include="Images\banner1.png" />
     <Content Include="Images\header.jpg" />
     <Content Include="Images\header1.jpg" />
     <Content Include="Images\logo6.png" />
+    <Content Include="Images\pdficon.png" />
     <Content Include="Images\search.gif" />
     <Content Include="Index.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPages\main.Master" />
+    <Content Include="FileServer\PdfFiles\ParaaEditorialpolicy.pdf" />
+    <None Include="Properties\PublishProfiles\Parapub.pubxml" />
     <None Include="Scripts\libs\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\formsubmission.js" />
     <Content Include="Scripts\index.js" />
     <Content Include="Scripts\libs\bootstrap.js" />
+    <Content Include="Scripts\libs\dropzone.js" />
     <Content Include="Scripts\libs\jquery-1.7.1.js" />
     <Content Include="Scripts\libs\jquery-1.7.1.min.js" />
     <Content Include="Scripts\libs\jquery-ui-1.8.20.js" />
@@ -163,6 +176,7 @@
     <Content Include="Scripts\login.js" />
     <Content Include="Scripts\masterpage.js" />
     <Content Include="Scripts\register.js" />
+    <Content Include="Styles\formsubmission.css" />
     <Content Include="Styles\home.css" />
     <Content Include="Styles\index.css" />
     <Content Include="Styles\libs\bootstrap-theme.css" />
@@ -183,6 +197,13 @@
     </Compile>
     <Compile Include="Forms\AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditorialGuideLines.aspx.cs">
+      <DependentUpon>EditorialGuideLines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\EditorialGuideLines.aspx.designer.cs">
+      <DependentUpon>EditorialGuideLines.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\EngineeringJournals.aspx.cs">
       <DependentUpon>EngineeringJournals.aspx</DependentUpon>

@@ -28,7 +28,6 @@ F:\Projects\sarat\Demo\APIServices\bin\Models.dll
 F:\Projects\sarat\Demo\APIServices\bin\DataLayer.pdb
 F:\Projects\sarat\Demo\APIServices\bin\Models.pdb
 F:\Projects\sarat\Demo\APIServices\obj\Debug\APIServices.csprojResolveAssemblyReference.cache
-F:\Projects\sarat\gitbranch\Sarat\APIServices\obj\Debug\APIServices.csprojResolveAssemblyReference.cache
 F:\Projects\sarat\gitbranch\Sarat\APIServices\bin\APIServices.dll
 F:\Projects\sarat\gitbranch\Sarat\APIServices\bin\APIServices.pdb
 F:\Projects\sarat\gitbranch\Sarat\APIServices\bin\Antlr3.Runtime.dll
@@ -56,5 +55,6 @@ F:\Projects\sarat\gitbranch\Sarat\APIServices\bin\System.Web.Razor.xml
 F:\Projects\sarat\gitbranch\Sarat\APIServices\bin\System.Web.WebPages.xml
 F:\Projects\sarat\gitbranch\Sarat\APIServices\bin\System.Web.WebPages.Deployment.xml
 F:\Projects\sarat\gitbranch\Sarat\APIServices\bin\System.Web.WebPages.Razor.xml
+F:\Projects\sarat\gitbranch\Sarat\APIServices\obj\Debug\APIServices.csprojResolveAssemblyReference.cache
 F:\Projects\sarat\gitbranch\Sarat\APIServices\obj\Debug\APIServices.dll
 F:\Projects\sarat\gitbranch\Sarat\APIServices\obj\Debug\APIServices.pdb

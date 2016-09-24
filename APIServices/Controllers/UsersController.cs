@@ -83,9 +83,9 @@ namespace APIServices.Controllers
 
             int userID = new DataLayer.Users().createUser(objUser);
             if (userID > 0)
-                result = "Registration Failed";
-            else
                 result = "Registered Succesfully. Please Check your Email";
+            else
+                result = "Registration Failed";
             return result;
         }
         [HttpPost]

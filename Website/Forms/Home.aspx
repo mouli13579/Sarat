@@ -12,9 +12,9 @@
                 <li><a href="#">Editorial</a></li>
                 <li><a href="#">Template</a></li>
                 <li><a href="#">Author Guide Lines</a></li>
-                <li><a href="#">Editorial Guide</a></li>
+                <li><a href="EditorialGuideLines.aspx">Editorial Guide</a></li>
                 <li><a href="#">Reviewer Guide</a></li>
-                <li><a href="#">Submit A ManuScript</a></li>
+                <li><a href="FormSubmission.aspx">Submit A ManuScript</a></li>
 
             </ul>
             <div class="divCall">
@@ -23,7 +23,7 @@
                     Submissions open for VOLUME 1. ISSUE 2. You may submit your research / review / survey papers from today.
                 </p>
                 <p>
-                    <span class="main-text">Last  Submission Date:  Sep</span> 30, 2016
+                    <span class="main-text">Last  Submission Date:  Oct</span> 01, 2016
                 </p>
                 <p>
                     <span class="main-text">Article Publication:</span> Within 21 Days
