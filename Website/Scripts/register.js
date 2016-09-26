@@ -128,7 +128,8 @@ function register() {
             data: dataToSend,
             success: function (msg, results) {
                 //if (msg.Status) {
-                    alert("User Registered Successfully");
+                alert("User Registered Successfully");
+                window.location.href = 'Home.aspx';
                 //}
             },
             error: function (msg, results) {

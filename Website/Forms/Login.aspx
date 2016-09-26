@@ -9,7 +9,7 @@ padding:10px;
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="col-xs-12">
-        <h1 style="text-align:center">Login Page</h1>
+        <h3 style="text-align:center">Login Page</h3>
          <div class="col-xs-12">
 
          
@@ -20,7 +20,8 @@ padding:10px;
                    <label id="lblUserName" class="lblreg"> User Name  </label>
                 </div>  
                 <div class="col-xs-7">
-                        <input type="text" id="txtUName" />
+                        <asp:TextBox runat="server" class="form-control input-sm" ID="txtUName" />
+                    <%--<input type="text" id="txtUName" class="form-control input-sm" />--%>
                  </div>
               </div>
               <div class="col-xs-12 row">
@@ -28,7 +29,8 @@ padding:10px;
                    <label id="lblPwd" class="lblreg"> Password  </label>
                 </div>  
                    <div class="col-xs-7">
-                     <input type="password" id="txtPwd" />
+                     <asp:TextBox runat="server" class="form-control input-sm" TextMode="Password" ID="txtPwd" />
+                       <%--<input type="password" id="txtPwd" class="form-control input-sm" />--%>
                  </div>
                 
               </div>
@@ -48,8 +50,22 @@ padding:10px;
 
                  </div>
                  <div class="col-xs-7 row">
-                     <input type="button" class="btn-info" style="margin-right:20px;" id="btnRegister" onclick=login() value="Submit" />
-                     <input type="button" class="btn-info" id="btnCancel" onclick="cancel();" value="Cancel" />
+                     <asp:Button ID="btnLogin" runat="server" CssClass="btn-info"  OnClick="btnLogin_Click" Text="Login" />
+                     <asp:Button ID="btnCancel" runat="server" CssClass="btn-info" OnClick="btnCancel_Click" Text="Cancel" />
+                     <%--<input type="button" class="btn-info" style="margin-right:20px;" id="btnlogin" value="Submit" onclick="login()"; />
+                     <input type="button" class="btn-info" id="btnCancel" onclick="cancel();" value="Cancel" />--%>
+                     
+                 </div>
+                 <div class="col-xs-1 row">
+
+                 </div>
+              </div>
+             <div class="col-xs-12 row">
+                  <div class="col-xs-4 row">
+
+                 </div>
+                 <div class="col-xs-7 row">
+                  <asp:Label ID="lblError" runat="server"></asp:Label>  
                  </div>
                  <div class="col-xs-1 row">
 

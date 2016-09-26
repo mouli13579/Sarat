@@ -34,16 +34,20 @@
                     <div id="header" class="col-xs-12">
                         <div id="im">
                         </div>
-                        <div id="links">
+                        <div id="links" class="lnkLogin" runat="server">
                             <ul>
-                                <li><a id="lnkLogin" href="../Forms/Login.aspx">Login</a></li>
-                                <span id="spanUserName"></span>
-                                <li><a id="lnkLogout" style="display: none;" onclick="logout();">Logout</a></li>
-
-                                <li><a id="lnkRegister" href="../Forms/Register.aspx">Register</a></li>
-                                <li><a id="lnkSettings" style="display: none;">Settings</a></li>
+                                <li><a id="lnkLogin" href="../Forms/Login.aspx">Login</a></li>                                                           
+                                <li><a id="lnkRegister" href="../Forms/Register.aspx">Register</a></li>                                
                             </ul>
                         </div>
+                        <div id="linksLogged" class="lnkLogin" runat="server">
+                            <ul>                                
+                                <asp:Label ID="lblUserName" runat="server"></asp:Label>
+                                <li><asp:LinkButton ID="lnkLogout" runat="server" Text="Logout" OnClick="lnkLogout_Click"></asp:LinkButton></li>                               
+                                <li><a id="A4" >Settings</a></li>
+                            </ul>
+                        </div>
+                        <input type="hidden" runat="server" id="hdnUserID" />
                     </div>
                     <div class="col-xs-12" id="navbar">
                         <div style="float: left;">

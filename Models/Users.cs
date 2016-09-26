@@ -27,5 +27,7 @@ namespace Models
         public string Country { get; set; }      
         public string ImageName { get; set; }
         public int RoleID { get; set; }
+        public string RoleCode { get; set; }
+        public string output { get; set; }
     }
 }

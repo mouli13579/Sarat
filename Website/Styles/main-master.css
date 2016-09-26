@@ -32,19 +32,19 @@ background-color:#ffffff;
     background-repeat: no-repeat;
     background-size: contain;
 }
-#links {
+.lnkLogin {
     position: absolute;
     right: 30px;
     top: 10px;
 }
-    #links ul {
+    .lnkLogin ul {
         list-style: none;
     }
-        #links ul li {
+        .lnkLogin ul li {
          display: inline;
           padding-left: 15px;
         }
-    #links a {
+    .lnkLogin a {
         color: mediumvioletred;
     }
 #navbar {

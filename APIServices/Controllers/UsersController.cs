@@ -12,31 +12,14 @@ namespace APIServices.Controllers
 {
     public class UsersController : ApiController
     {
-        public Models.Users GetLogin(string username, string password, int roleID)
+        [HttpPost]
+        public Models.Users GetLogin([FromBody]Models.Users obj)
         {
             Models.Users usr = new Models.Users();
             DataTable dt = new DataTable();
-            int userID = new DataLayer.Users().loginUser(username, password);
+            usr = new DataLayer.Users().loginUser(obj.UserName, obj.Password, obj.RoleCode);
 
-            if (userID == 0)
-            {
-                throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.NotFound, "User not found."));
-            }
-            else
-            {
-              dt= GetUser(userID);
-                
-              if(!checkAccess(dt,roleID))
-              {
-                  throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.NotFound, "Access Denied.Please Contact Administrator"));
-              }
 
-            }
-           foreach(DataRow dr in dt.Rows)
-           {
-               usr.UserID = userID;
-               usr.FirstName = dr["FirstName"].ToString();
-           }
             return usr;
         }
         private bool checkAccess(DataTable dt,int roleID)

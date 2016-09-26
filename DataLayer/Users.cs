@@ -14,10 +14,11 @@ namespace DataLayer
     public class Users : BaseClass
     {
         public Utils util = new Utils();
-        public int loginUser(string username, string password)
+        public Models.Users loginUser(string username, string password, string roleCode)
         {
-            int userId = 0;
+            Models.Users user= new Models.Users();
             string hashedPassword = util.Encrypt(password);
+            DataSet ds = new DataSet();
             SqlConnection connection = OpenConnection();
 
             try
@@ -26,14 +27,40 @@ namespace DataLayer
                     command.CommandType = CommandType.StoredProcedure;
                     command.CommandText = "[dbo].[CheckloginAccess]";
                     command.Parameters.AddWithValue("@username", username);
-                    command.Parameters.AddWithValue("@password", hashedPassword);                  
-
+                    command.Parameters.AddWithValue("@password", hashedPassword);
+                    command.Parameters.AddWithValue("@roleCode", roleCode);
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    da.SelectCommand = command;
+                    da.Fill(ds);
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        if (ds.Tables[0].Rows[0][0].ToString() == "1")
+                        {
+                            user.output = "Invalid Username/Password";
+                        }
+                        else if (ds.Tables[0].Rows[0][0].ToString() == "2")
+                        {
+                            user.output = "Access Denied";
+                        }
+                        else
+                        {
+                            foreach (DataRow dr in ds.Tables[0].Rows)
+                            {
+                                user.UserID = int.Parse(dr["UserID"].ToString());
+                                user.FirstName = dr["FirstName"].ToString();
+                                user.LastName = dr["LastName"].ToString();
+                                user.UserName = dr["UserName"].ToString();
+                                user.Email = dr["Email"].ToString();
+                                
+                            }
+                        }
+                    }
                     // Output parameter to return newly created UserID
-                    SqlParameter userID = command.Parameters.Add(new SqlParameter("UserID", SqlDbType.Int));
-                    userID.Direction = ParameterDirection.Output;
-                    command.ExecuteNonQuery();
+                    //SqlParameter userID = command.Parameters.Add(new SqlParameter("UserID", SqlDbType.Int));
+                   // userID.Direction = ParameterDirection.Output;
+                   // command.ExecuteNonQuery();
 
-                    userId = Convert.IsDBNull(userID.Value) ? 0 : (int)userID.Value;
+                  //  userId = Convert.IsDBNull(userID.Value) ? 0 : (int)userID.Value;
                 
             }
             finally
@@ -42,7 +69,7 @@ namespace DataLayer
             }
 
             // Return the user id which is 0 if we did not found a user.
-            return userId;
+            return user;
         }
 
         public DataTable GetUser(int userID)

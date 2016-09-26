@@ -14,9 +14,3 @@ $(document).ready(function () {
     }
     
 });
-
-function logout() {
-    localStorage.setItem("userName", '');
-    window.location.href = 'Home.aspx';
-
-}
