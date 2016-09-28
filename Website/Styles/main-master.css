@@ -47,6 +47,9 @@ background-color:#ffffff;
     .lnkLogin a {
         color: mediumvioletred;
     }
+#linksLogged a {
+
+}
 #navbar {
 padding:0;
     background-color: #555;
@@ -95,10 +98,18 @@ padding:0;
 padding:0;
 }
 
-/*.fake-input { position: relative; width:175px; margin:2px;}*/
-.fake-input input { border:none: background:#fff; display:block; width: 100%; box-sizing: border-box }
+.fake-input { padding: 2px 1px 0 0;}
+.fake-input input { border:none; background:#fff; display:block; width: 100%; box-sizing: border-box }
 .fake-input img { position: absolute; top: 4px; right: 5px }
 
 .errortextbox {
 border-color:red;
+}
+
+.popover-content ul {
+        padding: 7px 0 0px 0;
+list-style:none;
+}
+.popover-content ul li a {
+   
 }

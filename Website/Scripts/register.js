@@ -101,6 +101,33 @@ function cancel() {
     window.location.href='Home.aspx';
 }
 
+//function checkMail() {
+//    var objUser = new Object();
+    
+//    objUser.Email = "krishna.medida@gmail.com";
+//    var dataToSend = JSON.stringify(objUser);
+
+//    $.ajax({
+//        type: "POST",
+//        contentType: "application/json",
+//        dataType: "json",
+//        processData: false,
+//        url: baseApiUrl + '/users/TestService',
+//        async: false,
+//        data: dataToSend,
+//        success: function (msg, results) {
+//            //if (msg.Status) {
+//            alert("User Registered Successfully");
+//           // window.location.href = 'Home.aspx';
+//            //}
+//        },
+//        error: function (msg, results) {
+//            alert("Something went wrong. Please contact Administrator");
+
+//        }
+//    });
+//}
+
 function register() {
     var objUser = new Object();
     objUser.FirstName = $('#txtFName').val();

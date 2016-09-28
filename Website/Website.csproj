@@ -161,6 +161,7 @@
     <Content Include="AppSettings.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="connectionstring.config" />
     <None Include="Properties\PublishProfiles\Parapub.pubxml" />
     <None Include="Scripts\libs\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\common.js" />

@@ -1,16 +1,12 @@
 ﻿
-
 $(document).ready(function () {
-    // alert('hehe');
-    var islogin = localStorage.getItem("userName");
-    if (islogin =='sarat') {
-        $('#lnkLogin').hide();
-        $('#lnkRegister').hide();
-        $('#spanUserName').text('Welcome , '+islogin);
-        $('#lnkLogout').show();
-        $('#lnkSettings').show();
-        $('#lnkFormSubmit').show();
-        $('#lnkAuthor').show();
-    }
-    
+    $('#im').click(function () {
+        window.location.href = 'http://www.paraapublications.com/';
+    })
+    $("#lnkSettings").popover({
+        html: true,
+        content: function () {
+            return $("#settings-content").html();
+        }
+    });
 });

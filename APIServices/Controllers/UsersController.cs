@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 
 using System.Data;
+using System.Net.Mail;
 
 
 namespace APIServices.Controllers
@@ -22,21 +23,21 @@ namespace APIServices.Controllers
 
             return usr;
         }
-        private bool checkAccess(DataTable dt,int roleID)
+        private bool checkAccess(DataTable dt, int roleID)
         {
             bool allow = false;
             int dbRole = Int16.Parse(dt.Rows[0]["RoleID"].ToString());
             DateTime validDate = DateTime.Parse(dt.Rows[0]["isValidDate"].ToString());
-            if(dbRole==roleID)
+            if (dbRole == roleID)
             {
                 allow = true;
-                if(validDate<DateTime.Today)
+                if (validDate < DateTime.Today)
                 {
                     allow = false;
                 }
             }
             return allow;
-                 
+
         }
         [HttpGet]
         public DataTable GetUser(int id)
@@ -74,7 +75,7 @@ namespace APIServices.Controllers
         [HttpPost]
         public bool UpdateUser([FromBody] Models.Users objUser, int userID)
         {
-           return new DataLayer.Users().updateUser(objUser, userID);           
+            return new DataLayer.Users().updateUser(objUser, userID);
         }
         [HttpGet]
         public bool CheckUsernameExist(string uName)
@@ -83,13 +84,32 @@ namespace APIServices.Controllers
             allow = new DataLayer.Users().CheckUsernameExist(uName);
             return allow;
         }
-        //[HttpPost] 
-        //public bool TestService([FromBody] Users objUser)
-        //{
-        //    bool result = false;
+        [HttpPost]
+        public bool TestService([FromBody] Models.Users objUser)
+        {
+            bool result = false;
 
-        //    result = new DataLayer.Users().TestService(objUser);
-        //    return result;
-        //}
+            SmtpClient smtpClient = new SmtpClient();
+
+            smtpClient.Host = "mail.paraapublications.com";
+            //smtpClient.Host = "103.14.120.147";
+            smtpClient.Port = 25;
+            smtpClient.Credentials = new System.Net.NetworkCredential("admin@paraapublications.com", "Wabg26#7");
+            smtpClient.UseDefaultCredentials = false;
+            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtpClient.EnableSsl = false;
+            
+            MailMessage mail = new MailMessage();
+          
+            //Setting From , To and CC
+            mail.From = new MailAddress("admin@paraapublications.com", "MyWeb Site");
+            mail.To.Add(new MailAddress(objUser.Email));
+            mail.Body = "TEst Mail";
+            // mail.CC.Add(new MailAddress("MyEmailID@gmail.com"));
+
+            smtpClient.Send(mail);
+            //result = new DataLayer.Users().TestService(objUser);
+            return result;
+        }
     }
 }

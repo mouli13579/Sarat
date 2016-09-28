@@ -104,7 +104,8 @@
                  </div>
              </div>
              <div class="col-xs-12 row">
-                 <label class="lblreg">  Note : * mandatory feilds  </label>
+                 <label class="lblreg">  Note : * mandatory fields  </label>
+                 <%--<input type="button" onclick="checkMail()" value="check" />--%>
              </div>
          </div>
     </div>
