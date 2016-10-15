@@ -15,7 +15,11 @@ namespace Website.Forms
             {
                 Response.Redirect("Login.aspx");
             }
-
+            else
+            {
+                hdnEmail.Value = Session["Email"].ToString();
+                hdnUser.Value = Session["UserID"].ToString();
+            }
         }
     }
 }

@@ -18,7 +18,7 @@ max-height:80px;
 
             <div style="height: 25px;"></div>
             <p>
-                Please click on submit manuscript and fill the form appeared below
+                Please fill the form appeared below and click on submit manuscript
             </p>
             <div class="col-xs-12 zeropad form-horizontal">
                 <div class="form-group">
@@ -36,16 +36,17 @@ max-height:80px;
                 <div class="form-group">
                     <label class="control-label col-sm-3" for="txtEmail">Email :</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="txtEmail" placeholder="Enter Email Address" /><br />
+                       
+                        <input type="text" disabled="disabled" class="form-control" id="txtEmail" placeholder="Enter Email Address" /><br />
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-3" for="ddlCategory">Select Category :</label>
                     <div class="col-sm-9">
-                        <select class="form-control">
-                            <option>Select Category
+                        <select id="ddlCategory" class="form-control">
+                            <option value="0">Select Category
                             </option>
-                            <option>Engineering
+                            <option value="1">Engineering
                             </option>
                         </select><br />
                     </div>
@@ -65,7 +66,7 @@ max-height:80px;
                 <div class="form-group">
                     <label class="control-label col-sm-3" for="txtKeywords">Keywords :</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="txtKeyword1" placeholder="Keywords by coma seperated(Eg: Automatic assembly, Assembly sequence..etc)" /><br />
+                        <input type="text" class="form-control" id="txtKeywords" placeholder="Keywords by coma seperated(Eg: Automatic assembly, Assembly sequence..etc)" /><br />
                     </div>
                 </div>
                 <div class="form-group">
@@ -74,38 +75,38 @@ max-height:80px;
                         <div class="input-group">
                             <label class="input-group-btn">
                                 <span class="btn btn-primary">Browse
-                                <input type="file" style="display: none;">
+                                <input type="file" id="fileCoverLetter" style="display: none;">
                                 </span>
                             </label>
-                            <input type="text" class="form-control" readonly placeholder="Only Word Documents Max Size 1MB">
+                            <input type="text" class="form-control" readonly placeholder="Only Word Documents(Eg:.doc,.docx) Max Size 1MB">
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-sm-3" for="coverletter">Author Information :</label>
+                    <label class="control-label col-sm-3" for="authorletter">Author Information :</label>
 
                     <div class="col-sm-9" style="padding-bottom: 20px;">
                         <div class="input-group">
                             <label class="input-group-btn">
                                 <span class="btn btn-primary">Browse
-                                <input type="file" style="display: none;">
+                                <input type="file" id="fileAuthor" style="display: none;">
                                 </span>
                             </label>
-                            <input type="text" class="form-control" placeholder="Only Word Documents Max Size 1MB" readonly> 
+                            <input type="text" class="form-control" placeholder="Only Word Documents(Eg:.doc,.docx) Max Size 1MB" readonly> 
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-sm-3" for="coverletter">Blind Manuscript :</label>
+                    <label class="control-label col-sm-3" for="manuscript">Blind Manuscript :</label>
 
                    <div class="col-sm-9" style="padding-bottom: 20px;">
                         <div class="input-group">
                             <label class="input-group-btn">
                                 <span class="btn btn-primary">Browse
-                                <input type="file" style="display: none;">
+                                <input type="file" id="fileManuscript" style="display: none;">
                                 </span>
                             </label>
-                            <input type="text" placeholder="Only Word Documents Max Size 1MB" class="form-control" readonly> 
+                            <input type="text" placeholder="Only Word Documents(Eg:.doc,.docx) Max Size 1MB" class="form-control" readonly> 
                         </div>
                     </div>
                 </div>
@@ -116,10 +117,10 @@ max-height:80px;
                         <div class="input-group">
                             <label class="input-group-btn">
                                 <span class="btn btn-primary">Browse
-                                <input type="file"  multiple style="display: none;">
+                                <input type="file" id="fileSupporting"  style="display: none;">
                                 </span>
                             </label>
-                            <input type="text" placeholder="You can Upload Multiple Files [Max 10 MB Size]" class="form-control" readonly >
+                            <input type="text" placeholder="You can Upload File(Eg:.doc,.docx) [Max 4 MB Size]" class="form-control" readonly >
                         </div>
                     </div>
                    
@@ -127,8 +128,9 @@ max-height:80px;
                 <div class="form-group">
                     <div class="col-sm-4"></div>
                     <div class="col-sm-4">
-                        <input type="button" class="btn-info" value="Submit Manuscript" />
-                        <input type="button" class="btn-info" value="Cancel" />
+
+                        <input type="button" class="btn-info" onclick="formSubmission();" value="Submit Manuscript" />
+                        <input type="button" class="btn-info" value="Cancel" onclick="cancel();" />
 
                     </div>
                     <div class="col-sm-4">
@@ -137,7 +139,10 @@ max-height:80px;
                 </div>
 
             </div>
-            <div style="height: 25px; clear: both;"></div>
+            <div style="height: 25px; clear: both;">
+                        <input type="hidden" runat="server" id="hdnEmail" />
+                        <input type="hidden" runat="server" id="hdnUser" />
+            </div>
         </div>
         <div class="col-xs-1 zeropad">
         </div>

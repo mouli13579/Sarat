@@ -33,7 +33,9 @@ namespace Website.Forms
 
             if (usr.UserName != null)
             {
+                Session["UserID"] = usr.UserID;
                 Session["UserName"] = usr.UserName;
+                Session["Email"] = usr.Email;
                 Response.Redirect("Home.aspx");
             }
             else

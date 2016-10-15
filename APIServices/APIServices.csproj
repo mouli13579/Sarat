@@ -120,7 +120,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\FormsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UploadFileController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -143,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="UploadFiles\JournalForms\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -158,6 +161,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppSettings.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="connectionstring.config" />
     <None Include="Properties\PublishProfiles\APIService.pubxml" />
   </ItemGroup>
   <PropertyGroup>
@@ -176,9 +183,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>57890</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:63118/</IISUrl>
+          <IISUrl>http://localhost:53773/Services</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

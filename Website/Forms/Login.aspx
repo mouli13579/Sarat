@@ -65,7 +65,7 @@ padding:10px;
 
                  </div>
                  <div class="col-xs-7 row">
-                  <asp:Label ID="lblError" runat="server"></asp:Label>  
+                  <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>  
                  </div>
                  <div class="col-xs-1 row">
 

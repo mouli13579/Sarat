@@ -67,7 +67,7 @@ namespace APIServices.Controllers
 
             int userID = new DataLayer.Users().createUser(objUser);
             if (userID > 0)
-                result = "Registered Succesfully. Please Check your Email";
+                result = "Registered Succesfully.";
             else
                 result = "Registration Failed";
             return result;
@@ -94,7 +94,7 @@ namespace APIServices.Controllers
             smtpClient.Host = "mail.paraapublications.com";
             //smtpClient.Host = "103.14.120.147";
             smtpClient.Port = 25;
-            smtpClient.Credentials = new System.Net.NetworkCredential("admin@paraapublications.com", "Wabg26#7");
+            smtpClient.Credentials = new System.Net.NetworkCredential("support@paraapublications.com", "tHbk55%7");
             smtpClient.UseDefaultCredentials = false;
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtpClient.EnableSsl = false;
@@ -102,12 +102,27 @@ namespace APIServices.Controllers
             MailMessage mail = new MailMessage();
           
             //Setting From , To and CC
-            mail.From = new MailAddress("admin@paraapublications.com", "MyWeb Site");
+            mail.From = new MailAddress("support@paraapublications.com", "MyWeb Site");
             mail.To.Add(new MailAddress(objUser.Email));
-            mail.Body = "TEst Mail";
-            // mail.CC.Add(new MailAddress("MyEmailID@gmail.com"));
+            mail.Subject = "Testing";
+            mail.BodyEncoding = System.Text.Encoding.GetEncoding("utf-8");
 
-            smtpClient.Send(mail);
+            System.Net.Mail.AlternateView plainView = System.Net.Mail.AlternateView.CreateAlternateViewFromString(System.Text.RegularExpressions.Regex.Replace("test", @"<(.|\n)*?>", string.Empty), null, "text/plain");
+
+            mail.AlternateViews.Add(plainView);
+
+
+
+            //mail.Body = "TEst Mail";
+            // mail.CC.Add(new MailAddress("MyEmailID@gmail.com"));
+            try
+            {
+                smtpClient.Send(mail);
+            }
+            catch (SmtpException ex)
+            {
+                string exceptionMessage = ex.Message.ToUpper();
+            }
             //result = new DataLayer.Users().TestService(objUser);
             return result;
         }
