@@ -4,5 +4,6 @@ F:\Projects\sarat\Demo\Models\obj\Debug\Models.dll
 F:\Projects\sarat\Demo\Models\obj\Debug\Models.pdb
 F:\Projects\sarat\gitbranch\Sarat\Models\bin\Debug\Models.dll
 F:\Projects\sarat\gitbranch\Sarat\Models\bin\Debug\Models.pdb
+F:\Projects\sarat\gitbranch\Sarat\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 F:\Projects\sarat\gitbranch\Sarat\Models\obj\Debug\Models.dll
 F:\Projects\sarat\gitbranch\Sarat\Models\obj\Debug\Models.pdb

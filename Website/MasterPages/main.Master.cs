@@ -18,13 +18,15 @@ namespace Website.MasterPages
                     {
                         links.Visible = true;
                         linksLogged.Visible = false;
-
+                        lnkPapers.Visible = false;
                     }
                     else
                     {
                         links.Visible = false;
                         linksLogged.Visible = true;
                         lblUserName.Text = "Hi, "+uName.ToString();
+                        lnkPapers.Visible = true;
+                        hdnUserID.Value = Session["UserID"].ToString();
                     }
                 
             }

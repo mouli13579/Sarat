@@ -15,7 +15,7 @@
                 <li><a href="EditorialGuideLines.aspx">Editorial Guide</a></li>
                 <li><a href="#">Reviewer Guide</a></li>
                 <li><a href="FormSubmission.aspx">Submit A ManuScript</a></li>
-
+                
             </ul>
             <div class="divCall">
                <span class="main-text"> Call For Paper</span>
