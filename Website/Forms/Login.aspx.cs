@@ -36,12 +36,25 @@ namespace Website.Forms
                 Session["UserID"] = usr.UserID;
                 Session["UserName"] = usr.UserName;
                 Session["Email"] = usr.Email;
+                if (usr.Roles!=null)
+                {
+                    foreach (Models.Roles roles in usr.Roles)
+                    {
+                        if (roles.RoleCode == "ADMIN")
+                            Session["RoleCode"] = "ADMIN";
+                        if (roles.RoleCode == "REVIEW")
+                            Session["RoleCode"] = "REVIEW";
+                        if (roles.RoleCode == "EDIT")
+                            Session["RoleCode"] = "EDIT";
+                    }
+                }
                 Response.Redirect("Home.aspx");
             }
             else
             {
                 lblError.Text = usr.output.ToString();
             }
+
             //var URL = ConfigurationManager.AppSettings["baseApiUrl"].ToString() + "/users/GetLogin";
             //HttpClient client = new HttpClient();
             //client.BaseAddress = new Uri(URL);

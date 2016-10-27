@@ -35,13 +35,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="col-xs-3 left-menu zeropad">
         <ul>
-            <li><a href="#">ManuScript</a></li>
-            <li><a href="#">Editorial</a></li>
-            <li><a href="#">Template</a></li>
-            <li><a href="#">Author Guide Lines</a></li>
-            <li><a href="EditorialGuideLines.aspx">Editorial Guide</a></li>
-            <li><a href="#">Reviewer Guide</a></li>
             <li><a href="FormSubmission.aspx">Submit A ManuScript</a></li>
+                <li><a href="EditorialGuideLines.aspx">Editorial Guide Lines</a></li>
+                <li><a href="#">Template</a></li>               
 
         </ul>
         <div class="divCall">

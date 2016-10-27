@@ -30,15 +30,17 @@
                         <div id="im">
                         </div>
                         <div id="links" class="lnkLogin" runat="server">
-                            <ul>
+                            <ul>                                
                                 <li><a id="lnkLogin" href="../Forms/Login.aspx">Login</a></li>
                                 <li><a id="lnkRegister" href="../Forms/Register.aspx">Register</a></li>
                             </ul>
                         </div>
                         <div id="linksLogged" class="lnkLogin" runat="server">
                             <ul>
+                                <li><a id="lnkAdmin" runat="server" href="~/Admin/dashboard.aspx">Admin Panel</a></li>
                                 <asp:Label ID="lblUserName" runat="server"></asp:Label>
                                 <li><a id="lnkSettings" data-placement="bottom">Settings</a></li>
+                              
                             </ul>
                         </div>
                         <input type="hidden" runat="server" id="hdnUserID" />
@@ -48,11 +50,11 @@
                             <ul>
                                 <li><a href="../Forms/Home.aspx">Home</a></li>
                                 <li><a href="../Forms/Journals.aspx">Journals</a></li>
-                                <li><a href="#">GuideLines</a></li>
+                                <li><a href="../Forms/EditorialGuideLines.aspx">GuideLines</a></li>
                                 <li><a href="../Forms/AboutUs.aspx">About</a></li>
                                 <li><a href="../Forms/ContactUs.aspx">Contact</a></li>
                                 <li><a id="lnkPapers" runat="server" href="../Forms/MyScripts.aspx">My Papers</a></li>
-
+                               
                             </ul>
                         </div>
 

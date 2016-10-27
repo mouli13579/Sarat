@@ -31,5 +31,12 @@ namespace APIServices.Controllers
             dt = new DataLayer.FormSubmission().getManuScriptList(userID);
             return dt;
         }
+
+        public Models.FormSubmission GetManuScript(int id)
+        {
+            Models.FormSubmission ret = new Models.FormSubmission();
+            ret = new DataLayer.FormSubmission().getManuScript(id);
+            return ret;
+        }
     }
 }

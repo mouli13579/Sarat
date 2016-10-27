@@ -13,12 +13,14 @@ namespace Website.MasterPages
         {
             if (!IsPostBack)
             {
+                lnkAdmin.Visible = false;
               var uName = Session["UserName"];
                    if (uName == null)
                     {
                         links.Visible = true;
                         linksLogged.Visible = false;
-                        lnkPapers.Visible = false;
+                        lnkPapers.Visible = false;                       
+                       
                     }
                     else
                     {
@@ -27,6 +29,10 @@ namespace Website.MasterPages
                         lblUserName.Text = "Hi, "+uName.ToString();
                         lnkPapers.Visible = true;
                         hdnUserID.Value = Session["UserID"].ToString();
+
+                        if (Session["RoleCode"] != null)
+                         lnkAdmin.Visible = true;                     
+                           
                     }
                 
             }

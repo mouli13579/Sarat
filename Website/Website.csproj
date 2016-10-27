@@ -128,6 +128,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\dashboard.aspx" />
     <Content Include="Forms\AboutUs.aspx" />
     <Content Include="Forms\EditorialGuideLines.aspx" />
     <Content Include="Forms\EngineeringJournals.aspx" />
@@ -163,6 +164,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="connectionstring.config" />
+    <Content Include="MasterPages\admin.Master" />
     <None Include="Properties\PublishProfiles\Parapub.pubxml" />
     <None Include="Scripts\libs\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\common.js" />
@@ -188,6 +190,7 @@
     <Content Include="Scripts\libs\ui\jquery.ui.resizable.js" />
     <Content Include="Scripts\libs\ui\jquery.ui.widget.js" />
     <Content Include="Scripts\login.js" />
+    <Content Include="Scripts\manuscript.js" />
     <Content Include="Scripts\masterpage.js" />
     <Content Include="Scripts\myScripts.js" />
     <Content Include="Scripts\register.js" />
@@ -206,6 +209,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -306,6 +316,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\main.Master.cs">
       <DependentUpon>main.Master</DependentUpon>

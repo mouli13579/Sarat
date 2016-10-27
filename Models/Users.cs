@@ -29,5 +29,7 @@ namespace Models
         public int RoleID { get; set; }
         public string RoleCode { get; set; }
         public string output { get; set; }
+
+        public List<Models.Roles> Roles { get; set; }
     }
 }

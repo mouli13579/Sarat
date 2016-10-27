@@ -89,5 +89,35 @@ namespace DataLayer
 
             return dt;
         }
+        public Models.FormSubmission getManuScript(int id)
+        {
+            Models.FormSubmission ret = new Models.FormSubmission();
+            DataSet ds = new DataSet();
+            SqlConnection connection = OpenConnection();
+            try
+            {
+                SqlCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "[dbo].[GetManuScript]";
+                command.Parameters.AddWithValue("@formid", id);
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = command;
+                da.Fill(ds);
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                  ret=  ProcessData(ds);
+                }
+            }
+            finally { connection.Close(); }
+
+            return ret;
+        }
+
+        public Models.FormSubmission ProcessData(DataSet ds)
+        {
+            Models.FormSubmission ret = new Models.FormSubmission();
+          
+            return ret;
+        }
     }
 }
