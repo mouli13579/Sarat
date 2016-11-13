@@ -25,17 +25,22 @@ namespace APIServices.Controllers
             
         }
 
-        public DataTable GetManuScriptList(int userID)
+        public DataTable GetManuScriptList(int userID, bool isAdmin)
         {
             DataTable dt = new DataTable();
-            dt = new DataLayer.FormSubmission().getManuScriptList(userID);
+            dt = new DataLayer.FormSubmission().getManuScriptList(userID, isAdmin);
             return dt;
         }
 
-        public Models.FormSubmission GetManuScript(int id)
+        public List<Models.FormSubmission> GetManuScript(int id)
         {
-            Models.FormSubmission ret = new Models.FormSubmission();
-            ret = new DataLayer.FormSubmission().getManuScript(id);
+            List<Models.FormSubmission> ret = new List<Models.FormSubmission>();
+            Models.FormSubmission form = new Models.FormSubmission();
+            form = new DataLayer.FormSubmission().getManuScript(id);
+            if (form != null)
+            {
+                ret.Add(form);
+            }
             return ret;
         }
     }

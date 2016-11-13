@@ -129,6 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\dashboard.aspx" />
+    <Content Include="Admin\RecentForms.aspx" />
     <Content Include="Forms\AboutUs.aspx" />
     <Content Include="Forms\EditorialGuideLines.aspx" />
     <Content Include="Forms\EngineeringJournals.aspx" />
@@ -193,6 +194,7 @@
     <Content Include="Scripts\manuscript.js" />
     <Content Include="Scripts\masterpage.js" />
     <Content Include="Scripts\myScripts.js" />
+    <Content Include="Scripts\RecentForms.js" />
     <Content Include="Scripts\register.js" />
     <Content Include="Styles\formsubmission.css" />
     <Content Include="Styles\home.css" />
@@ -215,6 +217,13 @@
     </Compile>
     <Compile Include="Admin\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RecentForms.aspx.cs">
+      <DependentUpon>RecentForms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RecentForms.aspx.designer.cs">
+      <DependentUpon>RecentForms.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -66,7 +67,7 @@ namespace DataLayer
              return FormSubmissionID;
         }
 
-        public DataTable getManuScriptList(int userID)
+        public DataTable getManuScriptList(int userID , bool isadmin)
         {
             DataTable dt = new DataTable();
             DataSet ds = new DataSet();
@@ -77,6 +78,7 @@ namespace DataLayer
                  command.CommandType = CommandType.StoredProcedure;
                  command.CommandText = "[dbo].[GetManuScriptList]";
                  command.Parameters.AddWithValue("@userID", userID);
+                 command.Parameters.AddWithValue("@isAdmin", isadmin);
                  SqlDataAdapter da = new SqlDataAdapter();
                  da.SelectCommand = command;
                  da.Fill(ds);
@@ -102,6 +104,8 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@formid", id);
                 SqlDataAdapter da = new SqlDataAdapter();
                 da.SelectCommand = command;
+                da.TableMappings.Add("Table", "Form");
+                da.TableMappings.Add("Table1", "FormFiles");
                 da.Fill(ds);
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -115,9 +119,45 @@ namespace DataLayer
 
         public Models.FormSubmission ProcessData(DataSet ds)
         {
-            Models.FormSubmission ret = new Models.FormSubmission();
-          
-            return ret;
+            Models.FormSubmission form = new Models.FormSubmission();
+           foreach (DataRow dr in ds.Tables["Form"].Rows)
+            {
+                form = new Models.FormSubmission
+                {
+                    FormSubmissionID = (int)dr["FormSubmissionID"],
+                    UserID = (int)dr["UserID"],
+                    Prefix = dr["Prefix"].ToString(),
+                    CorrespondingAuthor = dr["CorrespondingAuthor"].ToString(),
+                    Email = dr["Email"].ToString(),
+                    Title = dr["Title"].ToString(),
+                    Abstraction = dr["Abstraction"].ToString(),
+                    CategoryName = dr["CategoryName"].ToString(),
+                    Keywords = dr["Keywords"].ToString(),
+                    CreatedOn = (DateTime)dr["CreatedDate"],
+                    UploadFiles = ProcessFormFilesDataRows(ds.Tables["FormFiles"].Select(string.Format("FormSubmissionID = {0}", (int)dr["FormSubmissionID"]))),
+
+
+                };
+           }
+            return form;
+        }
+        public List<Models.FormSubmissionFiles> ProcessFormFilesDataRows(IEnumerable<DataRow> rowsuploadFiles)
+        {
+            List<Models.FormSubmissionFiles> uploadfiles = new List<Models.FormSubmissionFiles>();
+            Models.FormSubmissionFiles ifile;
+            foreach (DataRow dr in rowsuploadFiles)
+            {
+                ifile = new Models.FormSubmissionFiles
+                {
+                    FormSubmissionFileID = (int)dr["FormSubmissionFileID"],
+                    FileType = dr["FileType"] != DBNull.Value ? dr["FileType"].ToString() : null,
+                    FileName = dr["FileName"] != DBNull.Value ? dr["FileName"].ToString() : null,
+                    FileURL = dr["FileName"] == DBNull.Value ? null : ConfigurationManager.AppSettings["FilesURL10"] + "/UploadFiles/JournalForms/" + (string)dr["FileName"],
+                };
+
+                uploadfiles.Add(ifile);
+            }
+            return uploadfiles;
         }
     }
 }
