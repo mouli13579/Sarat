@@ -48,11 +48,11 @@
                     <div class="col-xs-12" id="navbar">
                         <div style="float: left;">
                             <ul>
-                                <li><a href="../Forms/Home.aspx">Home</a></li>
-                                <li><a href="../Forms/Journals.aspx">Journals</a></li>
-                                <li><a href="../Forms/EditorialGuideLines.aspx">GuideLines</a></li>
-                                <li><a href="../Forms/AboutUs.aspx">About</a></li>
-                                <li><a href="../Forms/ContactUs.aspx">Contact</a></li>
+                                <li><a href="../Forms/Home.aspx">HOME</a></li>
+                                <li><a href="../Forms/Journals.aspx">JOURNALS</a></li>
+                                <li><a href="../Forms/EditorialGuideLines.aspx">GUIDELINES</a></li>
+                                <li><a href="../Forms/AboutUs.aspx">ABOUT</a></li>
+                                <li><a href="../Forms/ContactUs.aspx">CONTACT</a></li>
                                 <li><a id="lnkPapers" runat="server" href="../Forms/MyScripts.aspx">My Papers</a></li>
                                
                             </ul>
