@@ -76,14 +76,44 @@
                                     </div>
                                 </div>
                                 <div class="container col-xs-12">
-                                    <div class="row">
+                                    <%-- <div class="row">
                                         <ul class="breadcrumb">
                                             <li class="completed"><a href="javascript:void(0);">Recieved</a></li>
                                             <li class="active"><a href="javascript:void(0);">Editor Approval</a></li>
                                             <li><a href="javascript:void(0);">Reviewer Approval</a></li>
-                                           <%-- <li><a href="javascript:void(0);">Ready To Publish</a></li>--%>
-                                            <li><a href="javascript:void(0);">Published</a></li>
-                                        </ul>
+                                           <%-- <li><a href="javascript:void(0);">Ready To Publish</a></li>
+                                    <li><a href="javascript:void(0);">Published</a></li>
+                                    </ul>
+                                </div>
+                                    --%>
+                                    <div class="stepwizard">
+                                        <div class="stepwizard-row">                                            
+                                            <div class="stepwizard-step">                                                
+                                                <button type="button" class="btn btn-default btn-circle">1</button>
+                                                <p>Recieved</p>
+                                                <p>21-01-2017</p>
+                                            </div>
+                                            <div class="stepwizard-step">
+                                                <button type="button" class="btn btn-default btn-circle">2</button>
+                                                <p>Editor in Chief</p>
+                                                <p>26-01-2017</p>
+                                            </div>
+                                            <div class="stepwizard-step">
+                                                <button type="button" class="btn btn-default btn-circle">3</button>
+                                                <p>Associate Editor</p>
+                                                <p>01-02-2017</p>
+                                            </div>
+                                            <div class="stepwizard-step">
+                                                <button type="button" class="btn btn-default btn-circle" disabled="disabled">4</button>
+                                                <p>Reviewers</p>
+                                                <p>05-02-2017</p>
+                                            </div>
+                                            <div class="stepwizard-step">
+                                                <button type="button" class="btn btn-success btn-circle" disabled="disabled">5</button>
+                                                <p>Published</p>
+                                                <p>10-02-2017</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </td>

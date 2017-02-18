@@ -28,9 +28,11 @@ background-color:#ffffff;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("../Images/banner1.png");
+    background-image: url("../Images/banner3.png");
     background-repeat: no-repeat;
     background-size: contain;
+    width:500px;
+    height:500px;
 }
 .lnkLogin {
     position: absolute;
