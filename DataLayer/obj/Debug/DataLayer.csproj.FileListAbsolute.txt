@@ -12,3 +12,10 @@ F:\Projects\sarat\gitbranch\Sarat\DataLayer\bin\Debug\Models.pdb
 F:\Projects\sarat\gitbranch\Sarat\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
 F:\Projects\sarat\gitbranch\Sarat\DataLayer\obj\Debug\DataLayer.dll
 F:\Projects\sarat\gitbranch\Sarat\DataLayer\obj\Debug\DataLayer.pdb
+F:\Journal\Sarat\DataLayer\bin\Debug\DataLayer.dll
+F:\Journal\Sarat\DataLayer\bin\Debug\DataLayer.pdb
+F:\Journal\Sarat\DataLayer\bin\Debug\Models.dll
+F:\Journal\Sarat\DataLayer\bin\Debug\Models.pdb
+F:\Journal\Sarat\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+F:\Journal\Sarat\DataLayer\obj\Debug\DataLayer.dll
+F:\Journal\Sarat\DataLayer\obj\Debug\DataLayer.pdb
