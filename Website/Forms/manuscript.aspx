@@ -75,7 +75,7 @@
 
                                     </div>
                                 </div>
-                                <div class="container col-xs-12">
+                                <div class="container col-xs-12" style="margin-top:50px;">
                                     <%-- <div class="row">
                                         <ul class="breadcrumb">
                                             <li class="completed"><a href="javascript:void(0);">Recieved</a></li>
@@ -115,6 +115,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="container col-xs-12" style="text-align:center;margin-top:50px;">
+                                    <img src="../Images/processflow.jpg" style="width:600px;" />
                                 </div>
                             </td>
                         </tr>

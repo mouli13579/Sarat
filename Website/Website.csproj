@@ -159,6 +159,11 @@
     <Content Include="Images\map.PNG" />
     <Content Include="Images\pdficon.png" />
     <Content Include="Images\search.gif" />
+    <Content Include="Images\slide1.jpg" />
+    <Content Include="Images\slide2.jpg" />
+    <Content Include="Images\slide3.jpg" />
+    <Content Include="Images\slide4.jpg" />
+    <Content Include="Images\slide5.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPages\main.Master" />
@@ -182,6 +187,7 @@
     <Content Include="Scripts\libs\jquery.1.11.1.min.js" />
     <Content Include="Scripts\libs\json2.js" />
     <Content Include="Scripts\libs\jsrender.js" />
+    <Content Include="Scripts\libs\jssor.slider-22.2.8.mini.js" />
     <Content Include="Scripts\libs\modernizr-2.5.3.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
