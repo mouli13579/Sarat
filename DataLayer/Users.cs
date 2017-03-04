@@ -56,18 +56,22 @@ namespace DataLayer
                             }
                         }
                     }
-                    if (ds.Tables[1].Rows.Count > 0)
+                    if (ds.Tables.Count > 1)
                     {
-                        List<Models.Roles> rls = new List<Models.Roles>();
-                        foreach (DataRow dr in ds.Tables[1].Rows)
+                        if (ds.Tables[1].Rows.Count > 0)
                         {
-                            Models.Roles Role = new Models.Roles{
-                            RoleID = (int)dr["RoleID"],
-                            RoleCode=dr["RoleCode"].ToString()
-                        };
-                            rls.Add(Role);
+                            List<Models.Roles> rls = new List<Models.Roles>();
+                            foreach (DataRow dr in ds.Tables[1].Rows)
+                            {
+                                Models.Roles Role = new Models.Roles
+                                {
+                                    RoleID = (int)dr["RoleID"],
+                                    RoleCode = dr["RoleCode"].ToString()
+                                };
+                                rls.Add(Role);
+                            }
+                            user.Roles = rls;
                         }
-                        user.Roles = rls;
                     }
                     // Output parameter to return newly created UserID
                     //SqlParameter userID = command.Parameters.Add(new SqlParameter("UserID", SqlDbType.Int));

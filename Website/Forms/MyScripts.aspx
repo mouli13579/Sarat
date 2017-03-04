@@ -52,7 +52,7 @@
                 <span class="main-text">Article Publication:</span> Within 21 Days
             </p>
             <p>
-                <span class="main-text">Issue Publication last Date: Oct</span> 21, 2016
+                <span class="main-text">Issue Publication last Date: Apr</span> 20, 2017
             </p>
         </div>
     </div>
