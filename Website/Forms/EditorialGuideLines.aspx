@@ -18,14 +18,14 @@
                     Submissions open for VOLUME 1. ISSUE 2. You may submit your research / review / survey papers from today.
                 </p>
                 <p>
-                    <span class="main-text">Last  Submission Date:  Oct</span> 01, 2016
-                </p>
+                    <span class="main-text">Publishing are opened now</span>
+                </p> 
                 <p>
                     <span class="main-text">Article Publication:</span> Within 21 Days
                 </p>
-                <p>
+                <%--<p>
                     <span class="main-text">Issue Publication last Date: Apr</span> 20, 2017
-                </p>
+                </p>--%>
             </div>
         </div>
         <div class="col-xs-9 home-content ">
