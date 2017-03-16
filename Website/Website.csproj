@@ -150,11 +150,10 @@
     <Content Include="Images\5.jpg" />
     <Content Include="Images\6.png" />
     <Content Include="Images\7.png" />
+    <Content Include="Images\a02.png" />
     <Content Include="Images\banner.png" />
     <Content Include="Images\banner1.png" />
     <Content Include="Images\banner2.jpg" />
-    <Content Include="Images\custom_development.png" />
-    <Content Include="Images\GearTrain.jpg" />
     <Content Include="Images\header.jpg" />
     <Content Include="Images\header1.jpg" />
     <Content Include="Images\logo6.png" />
@@ -165,7 +164,12 @@
     <Content Include="Images\slide2.jpg" />
     <Content Include="Images\slide3.jpg" />
     <Content Include="Images\slide4.jpg" />
+    <Content Include="Images\slide42.jpg" />
+    <Content Include="Images\slide43.jpg" />
     <Content Include="Images\slide5.jpg" />
+    <Content Include="Images\slide45.jpg" />
+    <Content Include="Images\slide50.jpg" />
+    <Content Include="Images\slide51.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPages\main.Master" />
@@ -189,7 +193,7 @@
     <Content Include="Scripts\libs\jquery.1.11.1.min.js" />
     <Content Include="Scripts\libs\json2.js" />
     <Content Include="Scripts\libs\jsrender.js" />
-    <Content Include="Scripts\libs\jssor.slider-22.2.16.mini.js" />
+    <Content Include="Scripts\libs\jssor.slider-22.2.16.min.js" />
     <Content Include="Scripts\libs\jssor.slider-22.2.8.mini.js" />
     <Content Include="Scripts\libs\modernizr-2.5.3.js" />
     <Content Include="favicon.ico" />
