@@ -153,6 +153,8 @@
     <Content Include="Images\banner.png" />
     <Content Include="Images\banner1.png" />
     <Content Include="Images\banner2.jpg" />
+    <Content Include="Images\custom_development.png" />
+    <Content Include="Images\GearTrain.jpg" />
     <Content Include="Images\header.jpg" />
     <Content Include="Images\header1.jpg" />
     <Content Include="Images\logo6.png" />
@@ -187,6 +189,7 @@
     <Content Include="Scripts\libs\jquery.1.11.1.min.js" />
     <Content Include="Scripts\libs\json2.js" />
     <Content Include="Scripts\libs\jsrender.js" />
+    <Content Include="Scripts\libs\jssor.slider-22.2.16.mini.js" />
     <Content Include="Scripts\libs\jssor.slider-22.2.8.mini.js" />
     <Content Include="Scripts\libs\modernizr-2.5.3.js" />
     <Content Include="favicon.ico" />
