@@ -128,24 +128,17 @@
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:800px;height:300px;overflow:hidden;">
             <div>
                 <img data-u="image" src="../Images/slide42.jpg" />
-                <div data-u="caption" data-t="0" style="position:absolute;top:320px;left:30px;width:350px;height:30px;z-index:0;background-color:#6aacda;font-size:20px;color:#ffffff;line-height:30px;text-align:center;">You can Publish your own Scripts</div>
+                <%--<div data-u="caption" data-t="0" style="position:absolute;top:320px;left:30px;width:350px;height:30px;z-index:0;background-color:#6aacda;font-size:20px;color:#ffffff;line-height:30px;text-align:center;">You can Publish your own Scripts</div>--%>
             </div>
             <div>
                 <img data-u="image" src="../Images/slide43.jpg" />
-                <div data-u="caption" data-t="1" data-3d="1" style="position:absolute;top:-50px;left:125px;width:450px;height:30px;z-index:0;background-color:#6aacda;font-size:20px;color:#ffffff;line-height:30px;text-align:center;">It will Publish after our Reviewer's Approval</div>
-            </div>
-           <div>
-                <img data-u="image" src="../Images/slide45.jpg" />
-                <div data-u="caption" data-t="2" style="position:absolute;top:30px;left:-380px;width:350px;height:30px;z-index:0;background-color:#6aacda;font-size:20px;color:#ffffff;line-height:30px;text-align:center;">You can check our existing Scripts</div>
+             <%--   <div data-u="caption" data-t="1" data-3d="1" style="position:absolute;top:-50px;left:125px;width:450px;height:30px;z-index:0;background-color:#6aacda;font-size:20px;color:#ffffff;line-height:30px;text-align:center;">It will Publish after our Reviewer's Approval</div>--%>
             </div>
              <div>
                 <img data-u="image" src="../Images/slide51.jpg" />
-                <div data-u="caption" data-t="3" style="position:absolute;top:30px;left:30px;width:450px;height:30px;z-index:0;background-color:#6aacda;font-size:20px;color:#ffffff;line-height:30px;text-align:center;">We have Reviewer's with Highly Qualified..</div>
+           <%--     <div data-u="caption" data-t="3" style="position:absolute;top:30px;left:30px;width:450px;height:30px;z-index:0;background-color:#6aacda;font-size:20px;color:#ffffff;line-height:30px;text-align:center;">We have Reviewer's with Highly Qualified..</div>--%>
             </div>
-            <div>
-                <img data-u="image" src="../Images/slide50.jpg" />
-                <div data-u="caption" data-t="3" style="position:absolute;top:30px;left:30px;width:350px;height:30px;z-index:0;background-color:#6aacda;font-size:20px;color:#ffffff;line-height:30px;text-align:center;">Feel free to contact us</div>
-            </div>
+           
         </div>
         <!-- Bullet Navigator -->
         <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">
