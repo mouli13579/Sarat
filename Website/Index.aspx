@@ -138,7 +138,12 @@
                 <img data-u="image" src="../Images/slide51.jpg" />
            <%--     <div data-u="caption" data-t="3" style="position:absolute;top:30px;left:30px;width:450px;height:30px;z-index:0;background-color:#6aacda;font-size:20px;color:#ffffff;line-height:30px;text-align:center;">We have Reviewer's with Highly Qualified..</div>--%>
             </div>
-           
+            <div>
+                <img data-u="image" src="../Images/slider12.jpg" />
+            </div>
+             <div>
+                <img data-u="image" src="../Images/slider67.jpg" />
+            </div>
         </div>
         <!-- Bullet Navigator -->
         <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">

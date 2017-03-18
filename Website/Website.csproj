@@ -131,6 +131,7 @@
     <Content Include="Admin\dashboard.aspx" />
     <Content Include="Admin\RecentForms.aspx" />
     <Content Include="Forms\AboutUs.aspx" />
+    <Content Include="Forms\benifits.aspx" />
     <Content Include="Forms\EditorialGuideLines.aspx" />
     <Content Include="Forms\EngineeringJournals.aspx" />
     <Content Include="Forms\Journals.aspx" />
@@ -143,6 +144,7 @@
     <Content Include="Forms\manuscript.aspx" />
     <Content Include="Forms\MyScripts.aspx" />
     <Content Include="Forms\Register.aspx" />
+    <Content Include="Forms\ReviewProcess.aspx" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\2.jpg" />
     <Content Include="Images\3.jpg" />
@@ -170,6 +172,8 @@
     <Content Include="Images\slide45.jpg" />
     <Content Include="Images\slide50.jpg" />
     <Content Include="Images\slide51.jpg" />
+    <Content Include="Images\slider12.jpg" />
+    <Content Include="Images\slider67.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPages\main.Master" />
@@ -246,6 +250,13 @@
     </Compile>
     <Compile Include="Forms\AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\benifits.aspx.cs">
+      <DependentUpon>benifits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\benifits.aspx.designer.cs">
+      <DependentUpon>benifits.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\EditorialGuideLines.aspx.cs">
       <DependentUpon>EditorialGuideLines.aspx</DependentUpon>
@@ -330,6 +341,13 @@
     </Compile>
     <Compile Include="Forms\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReviewProcess.aspx.cs">
+      <DependentUpon>ReviewProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ReviewProcess.aspx.designer.cs">
+      <DependentUpon>ReviewProcess.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

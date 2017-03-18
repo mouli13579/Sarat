@@ -126,6 +126,8 @@
             <ul>
                 <li><a href="FormSubmission.aspx">Submit A ManuScript</a></li>
                 <li><a href="EditorialGuideLines.aspx">Editorial Guide Lines</a></li>
+                <li><a href="benifits.aspx">Benefits</a></li>
+                <li><a href="ReviewProcess.aspx">Peer Review Process</a></li>
                 <li><a href="#">Template</a></li>
 
 
@@ -133,7 +135,7 @@
             <div class="divCall">
                 <span class="main-text">Call For Paper</span>
                 <p>
-                    Submissions open for VOLUME 1. ISSUE 2. You may submit your research / review / survey papers from today.
+                    Submissions open for VOLUME 1. ISSUE 1. You may submit your research / review / survey papers from today.
                 </p>
                 <p>
                     <span class="main-text">Publishing are opened now</span>
@@ -163,6 +165,12 @@
             </div>
              <div>
                 <img data-u="image" src="../Images/slide51.jpg" />
+            </div>
+             <div>
+                <img data-u="image" src="../Images/slider12.jpg" />
+            </div>
+             <div>
+                <img data-u="image" src="../Images/slider67.jpg" />
             </div>
            
         </div>
