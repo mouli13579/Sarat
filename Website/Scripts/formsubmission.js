@@ -178,36 +178,42 @@ function formSubmission() {
     objForm.Keywords = $('#txtKeywords').val();
 
     var dataToSend = JSON.stringify(objForm);
+    var check = false;
     if (UploadFiles.length > 0) {
         for (var i = 0; i < UploadFiles.length; i++) {
             var filename = UploadFiles[i].FileName;
-           // if (UploadFiles[i].FileType == "CoverLetter") {
-              //  alert(filename);
-            //}
-            
+            if (UploadFiles[i].FileType == "ManuScript" && UploadFiles[i].FileName != undefined) {
+                check = true;
+            }
+        }
+        if (check == true) {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                dataType: "json",
+                processData: false,
+                url: baseApiUrl + '/Forms/CreateManuscript',
+                async: false,
+                data: dataToSend,
+                success: function (msg, results) {
+                    //if (msg.Status) {
+                    alert("Successfully Submitted your Script");
+                    window.location.href = 'Home.aspx';
+                    //}
+                },
+                error: function (msg, results) {
+
+                    alert("Something went wrong. Please contact Administrator");
+                }
+            });
+        }
+        else {
+            alert("Manuscript is mandatory..");
         }
        // alert(dataToSend);
-        $.ajax({
-            type: "POST",
-            contentType: "application/json",
-            dataType: "json",
-            processData: false,
-            url: baseApiUrl + '/Forms/CreateManuscript',
-            async: false,
-            data: dataToSend,
-            success: function (msg, results) {
-                //if (msg.Status) {
-               alert("Successfully Submitted your Script");
-               window.location.href = 'Home.aspx';
-                //}
-            },
-            error: function (msg, results) {
-
-                alert("Something went wrong. Please contact Administrator");
-            }
-        });
+       
     }
     else {
-        alert("You need to upload atleast one script/letter ");
+        alert("Manuscript is mandatory..");
     }
 }

@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/main.Master" AutoEventWireup="true" CodeBehind="FormSubmission.aspx.cs" Inherits="Website.Forms.FormSubmission" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<style>
-    #txtAbstract {
-max-height:80px;
-}
-</style>
+    <style>
+        #txtAbstract {
+            max-height: 80px;
+        }
+    </style>
 
     <script src="../Scripts/formsubmission.js"></script>
 
@@ -20,6 +20,7 @@ max-height:80px;
             <p>
                 Please fill the form appeared below and click on submit manuscript
             </p>
+
             <div class="col-xs-12 zeropad form-horizontal">
                 <div class="form-group">
                     <label class="control-label col-sm-3" for="txtprefix">Prefix :</label>
@@ -36,7 +37,7 @@ max-height:80px;
                 <div class="form-group">
                     <label class="control-label col-sm-3" for="txtEmail">Email :</label>
                     <div class="col-sm-9">
-                       
+
                         <input type="text" disabled="disabled" class="form-control" id="txtEmail" placeholder="Enter Email Address" /><br />
                     </div>
                 </div>
@@ -92,38 +93,43 @@ max-height:80px;
                                 <input type="file" id="fileAuthor" style="display: none;">
                                 </span>
                             </label>
-                            <input type="text" class="form-control" placeholder="Only Word Documents(Eg:.doc,.docx) Max Size 1MB" readonly> 
+                            <input type="text" class="form-control" placeholder="Only Word Documents(Eg:.doc,.docx) Max Size 1MB" readonly>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-sm-3" for="manuscript">Blind Manuscript :</label>
+                    <label class="control-label col-sm-3" for="manuscript">Blind Manuscript * :</label>
 
-                   <div class="col-sm-9" style="padding-bottom: 20px;">
+                    <div class="col-sm-9" style="padding-bottom: 20px;">
                         <div class="input-group">
                             <label class="input-group-btn">
                                 <span class="btn btn-primary">Browse
                                 <input type="file" id="fileManuscript" style="display: none;">
                                 </span>
                             </label>
-                            <input type="text" placeholder="Only Word Documents(Eg:.doc,.docx) Max Size 1MB" class="form-control" readonly> 
+                            <input type="text" placeholder="Only Word Documents(Eg:.doc,.docx) Max Size (2-3) MB" class="form-control" readonly>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label class="control-label col-sm-3" for="Sfiles">Attach Supporting Files :</label>
                     <div class="col-sm-9" style="padding-bottom: 20px;">
                         <div class="input-group">
                             <label class="input-group-btn">
                                 <span class="btn btn-primary">Browse
-                                <input type="file" id="fileSupporting"  style="display: none;">
+                                <input type="file" id="fileSupporting" style="display: none;">
                                 </span>
                             </label>
-                            <input type="text" placeholder="You can Upload File(Eg:.doc,.docx) [Max 4 MB Size]" class="form-control" readonly >
+                            <input type="text" placeholder="You can Upload File(Eg:.doc,.docx) [Max 4 MB Size]" class="form-control" readonly>
                         </div>
                     </div>
-                   
+
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        Note : Incase if you find any difficulty on uploading your files, Please send an Email to (editor@paraapublications.com)
+                    </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-4"></div>
@@ -140,8 +146,8 @@ max-height:80px;
 
             </div>
             <div style="height: 25px; clear: both;">
-                        <input type="hidden" runat="server" id="hdnEmail" />
-                        <input type="hidden" runat="server" id="hdnUser" />
+                <input type="hidden" runat="server" id="hdnEmail" />
+                <input type="hidden" runat="server" id="hdnUser" />
             </div>
         </div>
         <div class="col-xs-1 zeropad">
