@@ -15,6 +15,7 @@
                   <div class="col-xs-12">
                                     <div class="col-xs-6">
                                         <div class="tablerow">
+                                            <label>Reference Number: </label><span  style="color: #e49c19;padding: 10px;">{{>FormReferenceNumber}}</span><br />    
                                             <label>Title : </label><span> {{>Title}}</span><br />
                                             <label>Prefix : </label><span> {{>Prefix}}</span><br />
                                             <label>Corresponding Author : </label><span> {{>CorrespondingAuthor}}</span><br />

@@ -9,6 +9,7 @@ namespace Models
     public class FormSubmission : BaseClass
     {
         public int FormSubmissionID { get; set; }
+        public string FormRefNumber { get; set; }
         public int UserID { get; set; }
         public string Prefix { get; set; }
         public string CorrespondingAuthor { get; set; }

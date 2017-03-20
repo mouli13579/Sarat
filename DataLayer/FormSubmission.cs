@@ -125,6 +125,7 @@ namespace DataLayer
                 form = new Models.FormSubmission
                 {
                     FormSubmissionID = (int)dr["FormSubmissionID"],
+                    FormRefNumber = dr["FormReferenceNumber"].ToString(),
                     UserID = (int)dr["UserID"],
                     Prefix = dr["Prefix"].ToString(),
                     CorrespondingAuthor = dr["CorrespondingAuthor"].ToString(),

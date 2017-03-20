@@ -16,6 +16,8 @@
     <script src="../Scripts/libs/jsrender.js"></script>
     <script id="FormsList" type="text/x-jsrender">
        <div class="tablerow">
+                                            <label>Reference Number: </label>
+                                            <span style="color: #e49c19;padding: 10px;"> {{>FormRefNumber}} </span><br />                                           
                                             <label>Title : </label>
                                             <span>{{>Title}}</span><br />
                                             <label>Prefix : </label>
