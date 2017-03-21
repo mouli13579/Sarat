@@ -156,6 +156,7 @@
     <Content Include="Images\banner.png" />
     <Content Include="Images\banner1.png" />
     <Content Include="Images\banner2.jpg" />
+    <Content Include="Images\favicon.ico" />
     <Content Include="Images\header.jpg" />
     <Content Include="Images\header1.jpg" />
     <Content Include="Images\logo6.png" />
