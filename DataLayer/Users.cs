@@ -142,7 +142,7 @@ namespace DataLayer
                 command.Parameters.Add(new SqlParameter("PhoneNumber", user.PhoneNumber));
                 command.Parameters.Add(new SqlParameter("Email", user.Email));               
                 command.Parameters.Add(new SqlParameter("City", user.City));
-                command.Parameters.Add(new SqlParameter("PostalCode", user.PostalCode));
+                command.Parameters.Add(new SqlParameter("AlternateEmail", user.AltEmail));
                 command.Parameters.Add(new SqlParameter("Country", user.Country));                
                 command.Parameters.Add(new SqlParameter("RoleId", user.RoleID));
 
@@ -188,6 +188,35 @@ namespace DataLayer
             return ret;
         }
 
+        public DataTable GetUsersList()
+        {
+            DataTable ret = new DataTable();
+            SqlConnection connection = OpenConnection();
+            DataSet ds = new DataSet();
+            try
+            {
+                SqlCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "[dbo].[GetUsersList]";
+
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = command;
+                da.Fill(ds);
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    ret = ds.Tables[0];
+                }
+
+            }
+            finally
+            {
+                CloseConnection(connection);
+            }
+
+
+            return ret;
+
+        }
         //public bool TestService(Models.Users user)
         //{
         //    bool result = false;

@@ -191,7 +191,7 @@
                 We ensure the quality and stream lined syllabus of our books to reach all levels of students and professionals.
             </p>
             <p>
-                We ensure our journals publish novel contributions and recent developments in science and technology that will new directions to the professionals.
+                We ensure our journals publish novel contributions and recent developments in science and technology that will Guide Professional to the New Directions.
             </p>
         </div>
 

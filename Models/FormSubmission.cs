@@ -21,6 +21,7 @@ namespace Models
         public string Keywords { get; set; }
         public DateTime CreatedOn { get; set; }
         public List<FormSubmissionFiles> UploadFiles { get; set; }
+        public List<FormStatusLog> StatusLog { get; set; }
     }
 
    

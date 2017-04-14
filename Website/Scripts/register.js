@@ -2,16 +2,31 @@
 var isValidRegForm = true;
 $(document).ready(function() {
     $('#txtEmail').focusout(function () {
-        // 
-        var email = $('#txtEmail').val();
-        if (isValidEmailAddress(email)) {
-            isValidRegForm = true;
-            $('#txtEmail').removeClass("errortextbox");
+        if ($('#txtEmail').val().length > 0) {
+            var email = $('#txtEmail').val();
+            if (isValidEmailAddress(email)) {
+                isValidRegForm = true;
+                $('#txtEmail').removeClass("errortextbox");
+            }
+            else {
+                isValidRegForm = false;
+                alert('Invalid Email Address');
+                $('#txtEmail').addClass("errortextbox");
+            }
         }
-        else {
-            isValidRegForm = false;
-            alert('Invalid Email Address');
-            $('#txtEmail').addClass("errortextbox");
+    });
+    $('#txtAltEmail').focusout(function () {
+        if ($('#txtAltEmail').val().length > 0) {
+            var email = $('#txtAltEmail').val();
+            if (isValidEmailAddress(email)) {
+                isValidRegForm = true;
+                $('#txtAltEmail').removeClass("errortextbox");
+            }
+            else {
+                isValidRegForm = false;
+                alert('Invalid Email Address');
+                $('#txtAltEmail').addClass("errortextbox");
+            }
         }
     });
     $('#txtFName').focusout(function () {
@@ -37,62 +52,64 @@ $(document).ready(function() {
         }
     });
     $('#txtUName').focusout(function () {
-        // 
-        if ($('#txtUName').val() == '' || $('#txtUName').val() == undefined) {
-            isValidRegForm = false;
-            $('#txtUName').addClass("errortextbox");
-        }
-        else if ($('#txtUName').val().length < 6) {
-            isValidRegForm = false;
-            $('#txtUName').addClass("errortextbox");
-            alert('Username should be atleast six characters');
-        }
-        else {
-            isValidUserName($('#txtUName').val());
-            
+        if ($('#txtUName').val().length > 0) {
+            if ($('#txtUName').val() == '' || $('#txtUName').val() == undefined) {
+                isValidRegForm = false;
+                $('#txtUName').addClass("errortextbox");
+            }
+            else if ($('#txtUName').val().length < 6) {
+                isValidRegForm = false;
+                $('#txtUName').addClass("errortextbox");
+                // alert('Username should be atleast six characters');
+            }
+            else {
+                isValidUserName($('#txtUName').val());
+
+            }
         }
     });
     $('#txtCnfPwd').focusout(function () {
-        if ($('#txtCnfPwd').val().length < 6) {
-            isValidRegForm = false;
-            $('#txtCnfPwd').addClass("errortextbox");
-            alert('Confirm Password should be atleast six characters');
-        }
-        else if ($('#txtCnfPwd').val() != $('#txtPwd').val()) {
-            isValidRegForm = false;
-            $('#txtCnfPwd').addClass("errortextbox");
-            alert('Password and Confirm Password missmatch');
-        }
-        else {
-            isValidRegForm = true;
-            $('#txtCnfPwd').removeClass("errortextbox");
+        if ($('#txtCnfPwd').val().length > 0) {
+            if ($('#txtCnfPwd').val().length < 6) {
+                isValidRegForm = false;
+                $('#txtCnfPwd').addClass("errortextbox");
+                // alert('Confirm Password should be atleast six characters');
+            }
+            else if ($('#txtCnfPwd').val() != $('#txtPwd').val()) {
+                isValidRegForm = false;
+                $('#txtCnfPwd').addClass("errortextbox");
+                alert('Password and Confirm Password missmatch');
+            }
+            else {
+                isValidRegForm = true;
+                $('#txtCnfPwd').removeClass("errortextbox");
+            }
         }
     });
     $('#txtPwd').focusout(function () {
-        if ($('#txtPwd').val().length < 6) {
-            isValidRegForm = false;
-            $('#txtPwd').addClass("errortextbox");
-            alert(' Password should be atleast six characters');
-        }
-        else if ($('#txtCnfPwd').val() != $('#txtPwd').val()) {
-            isValidRegForm = false;
-            $('#txtPwd').addClass("errortextbox");
-            alert('Password and Confirm Password missmatch');
-        }
-        else {
-            isValidRegForm = true;
-            $('#txtPwd').removeClass("errortextbox");
+        if ($('#txtPwd').val().length > 0) {
+            if ($('#txtPwd').val().length < 6) {
+                isValidRegForm = false;
+                $('#txtPwd').addClass("errortextbox");
+                alert(' Password should be atleast six characters');
+            }
+            
+            else {
+                isValidRegForm = true;
+                $('#txtPwd').removeClass("errortextbox");
+            }
         }
     });
     $('#txtMobile').focusout(function () {
-        
-        if ($('#txtMobile').val().length!=10) {
-            isValidRegForm = false;
-            $('#txtMobile').addClass("errortextbox");
-        }
-        else {
-            isValidRegForm = true;
-            $('#txtMobile').removeClass("errortextbox");
+        if ($('#txtMobile').val().length > 0) {
+            if ($('#txtMobile').val().length != 10) {
+                isValidRegForm = false;
+                $('#txtMobile').addClass("errortextbox");
+            }
+            else {
+                isValidRegForm = true;
+                $('#txtMobile').removeClass("errortextbox");
+            }
         }
     });
 });
@@ -137,14 +154,16 @@ function register() {
     objUser.Password = $('#txtPwd').val();
     objUser.City = $('#txtCity').val();
     objUser.Country = $('#txtCountry').val();
-    objUser.PostalCode = $('#txtPin').val();
+    objUser.AltEmail = $('#txtAltEmail').val();
     objUser.PhoneNumber = $('#txtMobile').val();
     objUser.RoleID = 1;
     //  alert(JSON.stringify(objUser));
     checkValidRegForm();
     if (isValidRegForm) {
+
         var dataToSend = JSON.stringify(objUser);
-      //  alert(dataToSend);
+        //  alert(dataToSend);
+        $('#btnRegister').attr('disabled', 'disabled');
         $.ajax({
             type: "POST",
             contentType: "application/json",
@@ -193,6 +212,11 @@ function checkValidRegForm() {
     if ($('#txtCnfPwd').val() == '' || $('#txtCnfPwd').val() == undefined) {
         isValidRegForm = false;
         $('#txtCnfPwd').addClass("errortextbox");
+    }
+    if ($('#txtPwd').val() != $('#txtCnfPwd').val()) {
+        isValidRegForm = false;
+        $('#txtCnfPwd').addClass("errortextbox");
+        alert('Password and Confirm Password Missmatch');
     }
    
 }

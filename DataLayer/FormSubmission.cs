@@ -106,6 +106,7 @@ namespace DataLayer
                 da.SelectCommand = command;
                 da.TableMappings.Add("Table", "Form");
                 da.TableMappings.Add("Table1", "FormFiles");
+                da.TableMappings.Add("Table2", "StatusLog");
                 da.Fill(ds);
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -136,7 +137,7 @@ namespace DataLayer
                     Keywords = dr["Keywords"].ToString(),
                     CreatedOn = (DateTime)dr["CreatedDate"],
                     UploadFiles = ProcessFormFilesDataRows(ds.Tables["FormFiles"].Select(string.Format("FormSubmissionID = {0}", (int)dr["FormSubmissionID"]))),
-
+                    StatusLog = ProcessStatusLogDataRows(ds.Tables["StatusLog"].Select(string.Format("FormSubmissionID = {0}", (int)dr["FormSubmissionID"])))
 
                 };
            }
@@ -159,6 +160,24 @@ namespace DataLayer
                 uploadfiles.Add(ifile);
             }
             return uploadfiles;
+        }
+        public List<Models.FormStatusLog> ProcessStatusLogDataRows(IEnumerable<DataRow> rowsStatusLog)
+        {
+            List<Models.FormStatusLog> statusLog = new List<Models.FormStatusLog>();
+            Models.FormStatusLog ifile;
+            foreach (DataRow dr in rowsStatusLog)
+            {
+                ifile = new Models.FormStatusLog
+                {
+                    FormStatusID = (int)dr["FormStatusID"],
+                    FormSubmissionID = (int)dr["FormSubmissionID"],
+                    FormStatusName = dr["FormStatusName"] != DBNull.Value ? dr["FormStatusName"].ToString() : null,
+                    FormStatusCode = dr["FormStatusCode"] != DBNull.Value ? dr["FormStatusCode"].ToString() : null
+                };
+
+                statusLog.Add(ifile);
+            }
+            return statusLog;
         }
     }
 }

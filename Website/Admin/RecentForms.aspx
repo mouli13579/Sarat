@@ -5,7 +5,7 @@
     <script id="FormsList" type="text/x-jsrender">
         <tr>
              <td>
-                  <div class="col-xs-12">
+                  <div class="col-xs-12 card card-block">
                                     <div class="col-xs-6">
                                         <div class="tablerow">
                                             <label>Title : </label><span> {{>Title}}</span><br />

@@ -79,10 +79,10 @@
              </div>
              <div class="col-xs-12 row">
                 <div class="col-xs-2">
-                   <label id="lblPostalCode" class="lblreg"> Pin Code  </label>
+                   <label id="lblPostalCode" class="lblreg"> Alternate Email </label>
                 </div>  
                    <div class="col-xs-4">
-                     <input class="form-control input-sm" type="text" id="txtPin" />
+                     <input class="form-control input-sm" type="text" id="txtAltEmail" />
                  </div>
                  <div class="col-xs-2">
                    <label id="lblMobile" class="lblreg">  Mobile  </label>

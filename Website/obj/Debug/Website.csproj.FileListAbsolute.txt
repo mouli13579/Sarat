@@ -102,3 +102,7 @@ F:\Journal\Sarat\Website\bin\DotNetOpenAuth.OAuth.Consumer.xml
 F:\Journal\Sarat\Website\bin\DotNetOpenAuth.OpenId.xml
 F:\Journal\Sarat\Website\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
 F:\Journal\Sarat\Website\bin\DotNetOpenAuth.AspNet.xml
+F:\Projects\sarat\gitbranch\Sarat\Website\obj\Debug\Interop.Office.dll
+F:\Projects\sarat\gitbranch\Sarat\Website\obj\Debug\Website.csproj.ResolveComReference.cache
+F:\Projects\sarat\gitbranch\Sarat\Website\bin\Excel.dll
+F:\Projects\sarat\gitbranch\Sarat\Website\bin\Excel.xml

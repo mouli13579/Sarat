@@ -12,7 +12,7 @@
     <script id="FormsList" type="text/x-jsrender">
         <tr>
              <td>
-                  <div class="col-xs-12">
+                  <div class="col-xs-12 card card-block">
                                     <div class="col-xs-6">
                                         <div class="tablerow">
                                             <label>Reference Number: </label><span  style="color: #e49c19;padding: 10px;">{{>FormReferenceNumber}}</span><br />    

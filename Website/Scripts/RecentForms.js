@@ -36,5 +36,5 @@ function getForms() {
 }
 function viewForm(id) {
     // alert('view' + id);
-  //  window.location.href = 'manuscript.aspx?script=' + id;
+    window.location.href = 'AssignmentPage.aspx?script=' + id;
 }
